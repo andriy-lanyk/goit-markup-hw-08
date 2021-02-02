@@ -1,0 +1,19 @@
+.header {
+    background-color: $bg-primary-color;
+
+    &__container {
+        display: flex;
+      }
+      
+    &__nav {
+        display: flex;
+        align-items: center;
+      }
+      
+    &--border {
+        border: 1px solid $border-header-color;
+      }
+}
+  
+
+  

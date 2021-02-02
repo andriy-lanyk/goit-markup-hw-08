@@ -1,0 +1,51 @@
+ 
+  body {
+    color: $text-primary-color;
+    font-family: $font-primary;
+    letter-spacing: 0.03em;
+  }
+  
+  .container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  
+  .hero__button,
+  .project__button,
+  .subscribe__button,
+  .modal__button,
+  .modal-form__button {
+    cursor: pointer;
+  }
+  

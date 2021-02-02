@@ -1,0 +1,96 @@
+.team {
+    background-color: #f5f4fa;
+
+    &__title {
+      @extend %title-section;
+        margin-bottom: 50px;
+        font-size: $font-size-title-section;
+        line-height: $line-height-title;
+        text-align: center;
+      }
+      
+    &__list {
+        @extend %list-card;
+      }
+      
+    &__item {
+        width: calc((100% - 90px) / 4);
+        margin-right: $margin-section-item;
+        padding-bottom: 30px;
+      
+        background: $bg-primary-color;
+      
+        text-align: center;
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 3px $box-shadow-primary-color, 0px 1px 1px $box-shadow-secondary-color,
+          0px 2px 1px $box-shadow-tertiary-color;
+      }
+      
+    &__item:nth-child(4n) {
+        margin-right: 0;
+      }
+      
+    &__photo {
+        display: block;
+        margin-bottom: $margin-section-item;
+      }
+      
+    &__worker {
+        margin-top: 0;
+        margin-bottom: 10px;
+      
+        color: $text-title-color;
+      
+        font-weight: $font-weight-medium;
+        font-size: $font-size-subtitle-button;
+        line-height: $line-height-logo-card;
+        text-align: center;
+      }
+      
+    &__proffesion {
+        font-size: $font-size-subtitle-button;
+        line-height: $line-height-logo-card;
+        text-align: center;
+      }
+      
+    &__social-list {
+        display: flex;
+        margin-top: 16px;
+        padding-left: 32px;
+        padding-right: 32px;
+        justify-content: space-between;
+      }
+      
+    &__social-item {
+        width: 44px;
+        height: 44px;
+      }
+      
+    &__social-item:not(:last-child) {
+        margin-right: 10px;
+      }
+      
+    &__social-link {
+      @extend %icon-group;
+      
+        border-radius: 50%;
+        color: $fill-primary-color;
+      
+        @include transition (color, background-color);
+      }
+      
+    &__social-link:hover,
+    &__social-link:focus {
+        color: $bg-primary-color;
+        background-color: $activ-color;
+      }
+      
+    &__social-icon {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+}
+  
+
+  

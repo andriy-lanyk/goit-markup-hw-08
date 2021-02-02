@@ -1,0 +1,46 @@
+.contacts {
+    display: flex;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+        margin-right: $margin-header-item;
+      }
+      
+    &__link {
+        @extend %header-link;
+        height: 80px;
+      }
+      
+    &__link {
+        font-weight: $font-weight-medium;
+        font-size: $font-size-primary;
+        line-height: $line-height-primary;
+        letter-spacing: 0.02em;
+        color: $text-primary-color;
+      
+        @include transition (color);
+      }
+      
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+      }
+      
+    &__icon--envelope {
+        width: 16px;
+        height: 12px;
+      }
+      
+    &__icon--phone {
+        width: 10px;
+        height: 16px;
+      }
+      
+    &__link:hover,
+    &__link:focus {
+        color: $activ-color;
+      }
+      
+}
+  
+  

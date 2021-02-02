@@ -1,0 +1,262 @@
+.backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+  
+    width: 100%;
+    height: 100%;
+    background-color: $box-shadow-tertiary-color;
+  
+    opacity: 1;
+  
+    z-index: 3;
+  
+    @include transition (opacity);
+  }
+  
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    & .modal {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+  
+
+  
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  
+    width: 528px;
+    min-height: 581px;
+    background-color: $bg-primary-color;
+  
+    box-shadow: 0px 1px 3px $box-shadow-primary-color, 0px 1px 1px $box-shadow-secondary-color, 0px 2px 1px $box-shadow-tertiary-color;
+    border-radius: 4px;
+  
+    @include transition (transform);
+
+    &__button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        left: auto;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        background-color: $bg-primary-color;
+        color: $logo-primary-color;
+      
+        @include transition (color);
+      }
+      
+    &__button:hover,
+    &__button:focus {
+        color: $activ-color;
+      }
+      
+    &__icon {
+        fill: currentColor;
+    }
+}
+  
+
+  
+.modal-form {
+    margin: 40px;
+
+    &__title {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-modal-title;
+        line-height: $line-height-modal-title;
+        text-align: center;
+        margin-bottom: 12px;
+      
+        color: $text-title-color;
+      }
+      
+    &__lable {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+    &__content {
+        display: block;
+        height: 14px;
+        margin-bottom: 4px;
+      
+        font-weight: $font-weight-normal;
+        font-size: $font-size-modal-content;
+        line-height: $line-height-title;
+      
+        letter-spacing: 0.01em;
+      }
+      
+    &__field {
+        position: relative;
+      }
+      
+    &__textarea,
+    &__input {
+        width: 100%;
+        
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        outline: transparent;
+      }
+      
+    &__input {
+        height: 40px;
+        padding-left: 42px;
+      
+        @include transition (border-color);
+      }
+      
+    &__input:focus {
+        border-color: $activ-color;
+      }
+      
+    &__icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background-color: inherit;
+        fill: $logo-primary-color;
+      
+        @include transition (fill);
+      }
+      
+    &__input:focus + &__icon {
+        fill: $activ-color;
+      }
+      
+    &__textarea {
+        padding: 12px 16px;
+        height: 120px;
+        resize: none;
+      }
+      
+    &__textarea::placeholder {
+        font-weight: $font-weight-normal;
+        font-size: $font-size-modal-content;
+        line-height: $line-height-title;
+        letter-spacing: 0.01em;
+        
+        color: rgba(117, 117, 117, 0.5);
+      }
+      
+    &__textarea:focus {
+        border: 1px solid $activ-color;
+      }
+      
+    &__feedback {
+        display: block;
+        margin-bottom: 20px;
+      }
+      
+    &__checkbox-field {
+        position: relative;
+        margin-bottom: 30px;
+        padding-left: 36px;
+      }
+      
+    &__checkbox-text {
+        height: 24px;
+      
+        font-weight: $font-weight-normal;
+        font-size: $font-size-primary;
+        line-height: $line-height-text;
+      }
+      
+    &__checkbox::after {
+        content: '';
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+      
+        width: 16px;
+        height: 15px;
+      
+        background-color: $bg-primary-color;
+        border-color: $text-title-color;
+      
+        background-image: url(../images/checkbox.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+      
+        @include transition (background-color, border-color);
+      }
+      
+      /*сделал эффект для фокуса, по макету такого нет*/
+    &__checkbox-input:focus + &__checkbox::after {
+        border: 2px solid $activ-color;
+        border-radius: 2px;
+        background-image: none;
+      }
+      
+    &__checkbox-input:checked + &__checkbox::after {
+        background-color: $activ-color;
+        background-image: url(../images/icon-check.svg);
+        border-radius: 2px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+      }
+      
+    &__contract {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: $activ-color;
+      }
+      
+    &__button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+      
+        background-color: $activ-color;
+        box-shadow: 0px 4px 4px $box-shadow-button-color;
+        border-radius: 4px;
+        border-color: rgba(255, 255, 255, 0);
+        outline: transparent;
+      
+        font-weight: $font-weight-bold;
+        font-size: $font-size-subtitle-button;
+        line-height: $line-height-submit;
+      
+        text-align: center;
+        letter-spacing: 0.06em;
+      
+        color: $bg-primary-color;
+      
+        @include transition (background-color);
+      }
+      
+    &__button:focus,
+    &__button:hover {
+        background-color: $checked-button-color;
+      }
+      
+}
+  
+  

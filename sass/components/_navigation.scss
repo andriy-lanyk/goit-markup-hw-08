@@ -1,0 +1,40 @@
+.site-navigation {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: $margin-header-item;
+      }
+      
+    &__link {
+        @extend %header-link;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-primary;
+        line-height: $line-height-primary;
+        letter-spacing: 0.02em;
+        color: $text-title-color;
+      
+        @include transition (color);
+      }
+      
+    &__link--current {
+        color: $activ-color;
+        position: relative;
+      }
+      
+    &__link--current::after {
+        content: '';
+      
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        background-color: $activ-color;
+        border-radius: 2px;
+      }
+      
+    &__link:hover,
+    &__link:focus {
+        color: $activ-color;
+      }
+}  

@@ -1,0 +1,52 @@
+.clients {
+    background-color: $bg-primary-color;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 50px;
+        color: $text-title-color;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-title-section;
+        line-height: $line-height-title;
+        text-align: center;
+      }
+      
+    &__list {
+        display: flex;
+        margin: 0;
+      }
+      
+    &__item {
+        width: 170px;
+        height: 90px;
+      }
+      
+    &__item:not(:last-child) {
+        margin-right: $margin-section-item;
+      }
+      
+    &__link {
+        @extend %icon-group;
+      
+        color: $fill-primary-color;
+        border-radius: 4px;
+        border: 1px solid $fill-primary-color;
+        filter: drop-shadow(0px 4px 4px $box-shadow-transition-color);
+
+        @include transition (color, border, filter);
+      }
+      
+    &__link:hover,
+    &__link:focus {
+        color: $activ-color;
+        border: 1px solid $activ-color;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+      
+    &__logo {
+        fill: currentColor;
+      }
+}
+  
+
+  

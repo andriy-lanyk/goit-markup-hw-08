@@ -1,0 +1,32 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $footer-primary-color;
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+      }
+      
+    &__address {
+        margin-bottom: 9px;
+        color: $bg-primary-color;
+        font-style: inherit;
+        font-size: $font-size-primary;
+        line-height: $line-height-text;
+      }
+      
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+      }
+      
+    &__contact {
+        font-size: $font-size-primary;
+        line-height: $line-height-text;
+        letter-spacing: 0.03em;
+        color: $footer-text-color;
+      }
+}
+  
+
+  
