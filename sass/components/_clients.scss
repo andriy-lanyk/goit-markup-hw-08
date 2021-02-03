@@ -2,31 +2,22 @@
     background-color: $bg-primary-color;
 
     &__title {
-        margin-top: 0;
-        margin-bottom: 50px;
         color: $text-title-color;
         font-weight: $font-weight-bold;
         font-size: $font-size-title-section;
         line-height: $line-height-title;
-        text-align: center;
       }
       
     &__list {
-        display: flex;
-        margin: 0;
       }
       
     &__item {
-        width: 170px;
-        height: 90px;
       }
       
     &__item:not(:last-child) {
-        margin-right: $margin-section-item;
       }
       
     &__link {
-        @extend %icon-group;
       
         color: $fill-primary-color;
         border-radius: 4px;

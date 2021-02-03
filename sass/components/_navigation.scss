@@ -1,12 +1,9 @@
 .site-navigation {
-    display: flex;
 
     &__item:not(:last-child) {
-        margin-right: $margin-header-item;
       }
       
     &__link {
-        @extend %header-link;
         font-weight: $font-weight-medium;
         font-size: $font-size-primary;
         line-height: $line-height-primary;

@@ -6,16 +6,12 @@
     font-size: $font-size-logo;
     line-height: $line-height-logo-card;
     letter-spacing: 0.03em;
-  
-    margin-right: 93px;
 
     &__text {
         color: $activ-color;
       }
       
     &__footer {
-        display: inline-block;
-        margin-bottom: 20px;
       }
       
     &__text--white {

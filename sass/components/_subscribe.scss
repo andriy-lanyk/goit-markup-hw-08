@@ -1,19 +1,12 @@
 .subscribe {
-    margin-left: 93px;
 
     &__title {
-        @extend %footer-title;
       }
       
     &__form {
-        display: flex;
-        justify-content: center;
       }
       
     &__input {
-        width: 358px;
-        height: 50px;
-        padding-left: 16px;
       
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-sizing: border-box;
@@ -38,13 +31,6 @@
       }
       
     &__button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      
-        margin-left: 11px;
-        width: 200px;
-        height: 50px;
       
         background: $activ-color;
         box-shadow: 0px 4px 4px $box-shadow-button-color;
@@ -53,7 +39,6 @@
       }
       
     &__button-text {
-        margin-right: 10px;
         font-family: $font-primary;
         font-weight: $font-weight-bold;
         font-size: $font-size-subtitle-button;
@@ -65,8 +50,6 @@
       }
       
     &__icon {
-        width: 24px;
-        height: 24px;
       }
 }
   
