@@ -1,11 +1,61 @@
 .header {
   width: 480px;
   padding: 0 15px;
-    background-color: $bg-primary-color;
+  background-color: $bg-primary-color;
 
     &--border {
         border: 1px solid $border-header-color;
       }
+
+/* HEADER for MOBILE */
+    &__menu-button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+
+    &__menu-button--cross {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+
+    &__menu-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+
+      padding: 48px 40px;
+
+      background: $bg-primary-color;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    }
+
+    &__menu-navigation {
+      margin-bottom: 302px;
+    }
+
+    &__menu-navigation-item {
+      height: 48px;
+
+      font-family: $font-primary;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-menu-header;
+      line-height: $line-height-title;
+      letter-spacing: 0.02em;
+      
+      color: $text-title-color;
+    }
+
+    &__menu-social--vertical-line {
+      width: 22px;
+      
+      color: rgba(33, 33, 33, 0.2);
+    }
 }
   
 

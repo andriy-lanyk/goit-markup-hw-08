@@ -17,6 +17,13 @@
     &__text--white {
         color: $bg-primary-color;
       }
+
+    @media screen and (max-width: 767px) {
+        & {
+          display: block;
+          padding: 16px 0;
+        }
+      }
 }
   
 
