@@ -1,12 +1,7 @@
 .advantages {
+    margin-bottom: 60px;
     background-color: $bg-primary-color;
     
-    &__list {
-    }
-  
-    &__item {
-    }
-  
     &__item:not(:last-child) {
         margin-bottom: 30px;
     }

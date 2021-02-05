@@ -312,6 +312,7 @@ summary {
 }
 
 .advantages {
+  margin-bottom: 60px;
   background-color: #ffffff;
 }
 
@@ -400,6 +401,12 @@ a {
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 section {
@@ -1205,44 +1212,86 @@ section {
 }
 
 .team {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
 }
 
 .team__title {
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 28px;
   line-height: 1.17;
+  text-align: center;
+  color: #212121;
 }
 
 .team__item {
+  padding-bottom: 24px;
   background: #ffffff;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.team__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .team__photo {
-  display: block;
+  margin-bottom: 30px;
 }
 
 .team__worker {
-  color: #212121;
+  margin: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
+  color: #212121;
 }
 
 .team__proffesion {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
 
 .team__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team__social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.team__social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .team__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   color: #afb1b8;
   -webkit-transition-property: color, background-color;
@@ -1259,6 +1308,12 @@ section {
 }
 
 .team__social-icon {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
 }
 
