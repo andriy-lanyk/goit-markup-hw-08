@@ -1,27 +1,34 @@
 .footer {
   width: 480px;
-  padding: 0 15px;
+  padding: 60px 15px;
     background-color: $footer-primary-color;
 
     &__container {
+      text-align: center;
       }
       
     &__address {
-        color: $bg-primary-color;
-        font-style: inherit;
-        font-size: $font-size-primary;
-        line-height: $line-height-text;
-      }
+      margin-bottom: 8px;
+      font-style: normal;
+      font-size: $font-size-primary;
+      line-height: $line-height-text;
+
+      color: $bg-primary-color;
+    }
       
     &__item:not(:last-child) {
+      margin-bottom: 8px;
       }
       
     &__contact {
-        font-size: $font-size-primary;
-        line-height: $line-height-text;
-        letter-spacing: 0.03em;
-        color: $footer-text-color;
-      }
+      font-size: $font-size-primary;
+      line-height: $line-height-text;
+      color: $footer-text-color;
+    }
+
+    &__contacts {
+      margin-bottom: 60px;
+    }
 }
   
 
