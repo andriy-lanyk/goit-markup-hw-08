@@ -315,19 +315,31 @@ summary {
   background-color: #ffffff;
 }
 
+.advantages__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .advantages__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
+  color: #212121;
 }
 
 .advantages__text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
 
 .advantages__icon {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  text-align: center;
   border-radius: 4px;
   background-color: #f5f4fa;
 }
@@ -684,6 +696,7 @@ section {
 }
 
 .hero {
+  margin-bottom: 60px;
   padding: 0;
   color: #ffffff;
 }
@@ -1268,5 +1281,11 @@ section {
   font-size: 14px;
   line-height: 1.14;
   color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .work {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

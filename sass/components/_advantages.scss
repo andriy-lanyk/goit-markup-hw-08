@@ -7,23 +7,31 @@
     &__item {
     }
   
-    &__item:nth-child(4) {
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
     }
   
     &__title {
-
-    font-size: $font-size-primary;
-    line-height: $line-height-primary;
-    text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-primary;
+        line-height: $line-height-primary;
+        text-align: center;
+        text-transform: uppercase;
+        color: $text-title-color;
     }
   
     &__text {
-    font-weight: $font-weight-normal;
     font-size: $font-size-primary;
     line-height: $line-height-text;
     }
   
     &__icon {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        text-align: center;
     border-radius: 4px;
     background-color: $bg-secondary-color;
     }
