@@ -49,7 +49,7 @@
       
     &__button:hover,
     &__button:focus {
-        color: $activ-color;
+        color: $active-color;
       }
       
     &__icon {
@@ -102,7 +102,7 @@
       }
       
     &__input:focus {
-        border-color: $activ-color;
+        border-color: $active-color;
       }
       
     &__icon {
@@ -116,7 +116,7 @@
       }
       
     &__input:focus + &__icon {
-        fill: $activ-color;
+        fill: $active-color;
       }
       
     &__textarea {
@@ -133,7 +133,7 @@
       }
       
     &__textarea:focus {
-        border: 1px solid $activ-color;
+        border: 1px solid $active-color;
       }
       
     &__feedback {
@@ -170,13 +170,13 @@
       
       /*сделал эффект для фокуса, по макету такого нет*/
     &__checkbox-input:focus + &__checkbox::after {
-        border: 2px solid $activ-color;
+        border: 2px solid $active-color;
         border-radius: 2px;
         background-image: none;
       }
       
     &__checkbox-input:checked + &__checkbox::after {
-        background-color: $activ-color;
+        background-color: $active-color;
         background-image: url(../images/icon-check.svg);
         border-radius: 2px;
         background-size: contain;
@@ -187,12 +187,12 @@
     &__contract {
         text-decoration: underline;
         text-decoration-skip-ink: none;
-        color: $activ-color;
+        color: $active-color;
       }
       
     &__button {
       
-        background-color: $activ-color;
+        background-color: $active-color;
         box-shadow: 0px 4px 4px $box-shadow-button-color;
         border-radius: 4px;
         border-color: rgba(255, 255, 255, 0);

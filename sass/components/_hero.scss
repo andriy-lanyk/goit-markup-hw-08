@@ -1,45 +1,72 @@
 .hero {
-    padding-top: 0;
-    padding-bottom: 0;
-    color: $bg-primary-color;
+  padding: 0;
+  color: $bg-primary-color;
 
     &__overlay {
         margin-left: auto;
         margin-right: auto;
-        background-image: linear-gradient(
-            to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-          ),
-          url('../images/hero.jpg');
+
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         background-color: #2f303a;
       }
+
+    @media screen and (max-width: 767px) {
+      &__overlay {
+        width: 480px;
+        height: 400px; 
+        background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/heromobileimg.jpg');
+      }
+
+      @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+            &__overlay {
+            background-image: url('../images/heromobileimg@2x.jpg');
+            }
+      }
+
+      @media screen and (min-device-pixel-ratio: 3),
+          screen and (min-resolution: 288dpi),
+          screen and (min-resolution: 3dppx) {
+            &__overlay {
+            background-image: url('../images/heromobileimg@3x.jpg');
+            }
+      }
+    } 
       
     &__container {
-        margin-left: auto;
-        margin-right: auto;
+        padding: 118px 53px;
       }
       
     &__text {
         margin: 0;
+        margin-bottom: 30px;
+        font-family: $font-secondary;
         font-weight: $font-weight-heavy;
-        font-size: $font-size-hero;
-        line-height: $line-height-hero;
+        font-size: $font-size-logo;
+        line-height: $line-height-project;
+        text-align: center;
+
         letter-spacing: 0.06em;
         text-transform: uppercase;
       }
       
     &__button {
-        display: inline-block;
+        display: block;
+        margin: auto;
         padding: 10px 32px;
       
         min-width: 200px;
         min-height: 50px;
       
-        background-color: $activ-color;
+        background-color: $active-color;
         color: $bg-primary-color;
         font-family: $font-primary;
         font-weight: $font-weight-bold;

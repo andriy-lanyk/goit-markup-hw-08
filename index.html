@@ -10,27 +10,28 @@
 <body>
     <header class="header">
         <div class="container header__container">
-            <a class="logo" href="./index.html"><span class="logo__text">Web</span>Studio</a>
-            <button
-            type="button"
-            class="header__menu-button"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
-            >
-                <svg
-                width="40"
-                height="40"
-                aria-label="Переключатель мобильного меню"
+            <div class="header__container--mobile">
+                <a class="logo" href="./index.html"><span class="logo__text">Web</span>Studio</a>
+                <button
+                type="button"
+                class="header__menu-button header__menu-button--burger is-open"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-button
                 >
-                    <use class="header__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
-                </svg>
-            </button>
-
+                    <svg
+                    width="40"
+                    height="40"
+                    aria-label="Переключатель мобильного меню"
+                    >
+                        <use class="header__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </div>
             <div class="header__menu-container" id="menu-container" data-menu>
                 <button
                 type="button"
-                class="header__menu-button header__menu-button--cross"
+                class="header__menu-button header__menu-button--cross is-open"
                 aria-expanded="false"
                 aria-controls="menu-container"
                 data-menu-button
@@ -46,21 +47,24 @@
 
                 <nav>
                     <ul class="header__menu-navigation list">
-                        <li class="header__menu-navigation-item"><a class="header__menu-navigation-link" href="">Студия</a></li>
-                        <li class="header__menu-navigation-item"><a class="header__menu-navigation-link" href="./portfolio.html">Портфолио</a></li>
-                        <li class="header__menu-navigation-item"><a class="header__menu-navigation-link" href="">Контакты</a></li>
+                        <li class="header__menu-navigation-item">
+                            <a class="header__menu-navigation-link header__menu-navigation-link--current" href="">Студия</a></li>
+                        <li class="header__menu-navigation-item">
+                            <a class="header__menu-navigation-link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="header__menu-navigation-item">
+                            <a class="header__menu-navigation-link" href="">Контакты</a></li>
                     </ul>
                 </nav>
 
                 <ul class="header__menu-contacts list">
                     <li class="header__menu-contacts-item">
-                        <a class="header__menu-contacts-link" href="tel:+380961111111">
+                        <a class="header__menu-contacts-phone" href="tel:+380961111111">
                             <span >+38 096 111 11 11</span>
                         </a>
                     </li>
                     
                     <li class="header__menu-contacts-item">
-                        <a class="header__menu-contacts-link" href="mailto:info@devstudio.com">
+                        <a class="header__menu-contacts-mail" href="mailto:info@devstudio.com">
                             <span>info@devstudio.com</span>
                         </a>
                     </li>
@@ -69,22 +73,22 @@
                 <ul class="header__menu-social list">
                     <li class="header__menu-social-item">
                         <a class="header__menu-social-link" href="#">
-                            <span>Instagram</span>
+                            <span class="header__menu-social-link--text">Instagram</span>
                         </a>
                         <span class="header__menu-social--vertical-line">|</span>
                     </li>
                     
                     <li class="header__menu-social-item">
                         <a class="header__menu-social-link" href="#">
-                            <span>Twitter</span>
-                            <span class="header__menu-social--vertical-line">|</span>
+                            <span class="header__menu-social-link--text">Twitter</span>
                         </a>
+                        <span class="header__menu-social--vertical-line">|</span>
                     </li>
                     <li class="header__menu-social-item">
                         <a class="header__menu-social-link" href="#">
-                            <span>Facebook</span>
-                            <span class="header__menu-social--vertical-line">|</span>
+                            <span class="header__menu-social-link--text">Facebook</span>
                         </a>
+                        <span class="header__menu-social--vertical-line">|</span>
                     </li>
                     
                     <li class="header__menu-social-item">
