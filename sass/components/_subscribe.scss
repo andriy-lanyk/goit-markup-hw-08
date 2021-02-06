@@ -17,16 +17,20 @@
       padding-left: 16px;
       margin-bottom: 20px;
       
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-sizing: border-box;
-        filter: drop-shadow(0px 4px 4px $box-shadow-button-color);
-        border-radius: 4px;
-        outline: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-sizing: border-box;
+      filter: drop-shadow(0px 4px 4px $box-shadow-button-color);
+      border-radius: 4px;
+      outline: transparent;
       
-        background-color: inherit;
+      background-color: inherit;
       
-        color: $logo-primary-color;
+      color: $logo-primary-color;
+
+      @media screen and (min-width: 768px) {
+        min-width: 450px;
       }
+    }
         
     &__input::placeholder {
         font-family: $font-primary;
@@ -45,26 +49,35 @@
       margin-right: auto;
       padding: 0 28px;
 
-
       width: 200px;
       height: 50px;
       
-        background: $active-color;
-        box-shadow: 0px 4px 4px $box-shadow-button-color;
-        border-radius: 4px;
-        border-color: transparent;
-      }
+      background: $active-color;
+      box-shadow: 0px 4px 4px $box-shadow-button-color;
+      border-radius: 4px;
+      border-color: transparent;
+    }
       
     &__button-text {
-        font-family: $font-primary;
-        font-weight: $font-weight-bold;
-        font-size: $font-size-subtitle-button;
-        line-height: $line-height-submit;
+      font-family: $font-primary;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-subtitle-button;
+      line-height: $line-height-submit;
       
-        letter-spacing: 0.06em;
+      letter-spacing: 0.06em;
       
-        color: $bg-primary-color;
+      color: $bg-primary-color;
+    }
+
+    /* TABLET */
+    
+    @media screen and (min-width: 768px) {
+      & {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
       }
+    }
 }
   
 
