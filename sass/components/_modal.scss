@@ -5,6 +5,8 @@
   
     width: 100%;
     height: 100%;
+
+    padding: 93px 15px;
     background-color: $box-shadow-tertiary-color;
   
     opacity: 1;
@@ -25,10 +27,11 @@
 
 .modal {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-  
+    width: calc(100% - 30px);
+    height: calc(100vh - 12vh - 12vh);
+    min-height: 590px;
+    padding: 40px;
+    
     background-color: $bg-primary-color;
   
     box-shadow: 0px 1px 3px $box-shadow-primary-color, 0px 1px 1px $box-shadow-secondary-color, 0px 2px 1px $box-shadow-tertiary-color;
@@ -38,6 +41,14 @@
 
     &__button {
         position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
@@ -61,19 +72,25 @@
 .modal-form {
 
     &__title {
-        font-weight: $font-weight-bold;
-        font-size: $font-size-modal-title;
-        line-height: $line-height-modal-title;
-        text-align: center;
-        margin-bottom: 12px;
+      margin-bottom: 12px;
+
+      font-weight: $font-weight-bold;
+      font-size: $font-size-modal-title;
+      line-height: $line-height-modal-mobile;
       
-        color: $text-title-color;
+      text-align: center;
+      
+      color: $text-title-color;
       }
       
     &__lable {
+      display: block;
+      margin-bottom: 10px;
       }
       
     &__content {
+      display: block;
+      margin-bottom: 4px;
       
         font-weight: $font-weight-normal;
         font-size: $font-size-modal-content;
@@ -97,6 +114,8 @@
       }
       
     &__input {
+      height: 40px;
+      padding-left: 42px;
       
         @include transition (border-color);
       }
@@ -107,6 +126,7 @@
       
     &__icon {
         position: absolute;
+        left: 12px;
         top: 50%;
         transform: translateY(-50%);
         background-color: inherit;
@@ -120,13 +140,15 @@
       }
       
     &__textarea {
+      padding: 12px 16px;
+      height: 120px;
         resize: none;
       }
       
     &__textarea::placeholder {
         font-weight: $font-weight-normal;
-        font-size: $font-size-modal-content;
-        line-height: $line-height-title;
+        font-size: $font-size-primary;
+        line-height: $line-height-primary;
         letter-spacing: 0.01em;
         
         color: rgba(117, 117, 117, 0.5);
@@ -137,17 +159,26 @@
       }
       
     &__feedback {
+      display: block;
+      margin-bottom: 20px;
       }
       
     &__checkbox-field {
         position: relative;
+        margin-bottom: 30px;
       }
       
     &__checkbox-text {
+      padding-left: 24px;
       
-        font-weight: $font-weight-normal;
-        font-size: $font-size-primary;
-        line-height: $line-height-text;
+        font-size: $font-size-modal-content;
+        line-height: $line-height-title;
+      }
+
+    &__contract {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: $active-color;
       }
       
     &__checkbox::after {
@@ -155,7 +186,10 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        left: 0;
         display: inline-block;
+        width: 16px;
+        height: 16px;
       
         background-color: $bg-primary-color;
         border-color: $text-title-color;
@@ -184,19 +218,11 @@
         background-origin: border-box;
       }
       
-    &__contract {
-        text-decoration: underline;
-        text-decoration-skip-ink: none;
-        color: $active-color;
-      }
-      
     &__button {
-      
-        background-color: $active-color;
-        box-shadow: 0px 4px 4px $box-shadow-button-color;
-        border-radius: 4px;
-        border-color: rgba(255, 255, 255, 0);
-        outline: transparent;
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 50px;
       
         font-weight: $font-weight-bold;
         font-size: $font-size-subtitle-button;
@@ -206,6 +232,12 @@
         letter-spacing: 0.06em;
       
         color: $bg-primary-color;
+
+        background-color: $active-color;
+        box-shadow: 0px 4px 4px $box-shadow-button-color;
+        border-radius: 4px;
+        border-color: rgba(255, 255, 255, 0);
+        outline: transparent;
       
         @include transition (background-color);
       }

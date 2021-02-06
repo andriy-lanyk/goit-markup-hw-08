@@ -23,14 +23,16 @@
 
       display: flex;
       flex-wrap: wrap;
-      margin-right: -30px;
       margin-top: -30px;
+      margin-right: -15px;
+      margin-left: -15px;
       }
       
     &__item {
       display: inline-block;
-      margin-right: 30px;
       margin-top: 30px;
+      margin-right: 15px;
+      margin-left: 15px;
 
       height: 90px;
       width: calc((100% - 4 * 15px) / 2);

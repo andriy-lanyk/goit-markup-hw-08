@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  width: 480px;
+  width: 100%;
   padding: 0 15px;
   background-color: $bg-primary-color;
 
@@ -21,6 +21,19 @@
       padding: 0;
       border: none;
       background-color: transparent;
+
+      color: $logo-primary-color;
+      
+      @include transition (color);
+    }
+
+    &__menu-button:hover,
+    &__menu-button:focus {
+        color: $active-color;
+      }
+
+    &__icon {
+      fill: currentColor;
     }
 
     &__menu-button--cross {
@@ -31,21 +44,26 @@
 
     &__menu-container {
       display: none;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
 
+      width: 100vw;
+      height: 100vh;
+
       padding: 48px 40px;
 
-      background: $bg-primary-color;
+      background-color: $bg-primary-color;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+      z-index: 3;
     }
 
     &__menu-container.is-open {
       display: block;
     }
 
-    &__menu-navigation {
+    &__menu {
       margin-bottom: 302px;
     }
 

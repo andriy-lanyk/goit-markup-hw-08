@@ -370,14 +370,16 @@ summary {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -30px;
   margin-top: -30px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .clients__item {
   display: inline-block;
-  margin-right: 30px;
   margin-top: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   height: 90px;
   width: calc((100% - 4 * 15px) / 2);
 }
@@ -447,7 +449,7 @@ img {
 }
 
 section {
-  width: 480px;
+  width: 100%;
   padding: 0 15px;
 }
 
@@ -587,7 +589,7 @@ section {
 }
 
 .footer {
-  width: 480px;
+  width: 100%;
   padding: 60px 15px;
   background-color: #2f303a;
 }
@@ -620,7 +622,7 @@ section {
 
 .header {
   position: relative;
-  width: 480px;
+  width: 100%;
   padding: 0 15px;
   background-color: #ffffff;
   /* HEADER for MOBILE */
@@ -648,6 +650,21 @@ section {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: #000000;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__menu-button:hover, .header__menu-button:focus {
+  color: #2196f3;
+}
+
+.header__icon {
+  fill: currentColor;
 }
 
 .header__menu-button--cross {
@@ -658,20 +675,23 @@ section {
 
 .header__menu-container {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   padding: 48px 40px;
-  background: #ffffff;
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  z-index: 3;
 }
 
 .header__menu-container.is-open {
   display: block;
 }
 
-.header__menu-navigation {
+.header__menu {
   margin-bottom: 302px;
 }
 
@@ -768,7 +788,7 @@ section {
 
 @media screen and (max-width: 767px) {
   .hero__overlay {
-    width: 480px;
+    width: 100%;
     height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/heromobileimg.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/heromobileimg.jpg");
@@ -927,6 +947,7 @@ section {
   left: 0px;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition-property: opacity;
@@ -950,10 +971,10 @@ section {
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  width: calc(100% - 30px);
+  height: calc(100vh - 12vh - 12vh);
+  min-height: 590px;
+  padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -970,6 +991,19 @@ section {
 
 .modal__button {
   position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #ffffff;
@@ -995,15 +1029,22 @@ section {
 }
 
 .modal-form__title {
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
-  margin-bottom: 12px;
   color: #212121;
 }
 
+.modal-form__lable {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .modal-form__content {
+  display: block;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -1024,6 +1065,8 @@ section {
 }
 
 .modal-form__input {
+  height: 40px;
+  padding-left: 42px;
   -webkit-transition-property: border-color;
   transition-property: border-color;
   -webkit-transition-duration: 250ms;
@@ -1038,6 +1081,7 @@ section {
 
 .modal-form__icon {
   position: absolute;
+  left: 12px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1056,37 +1100,39 @@ section {
 }
 
 .modal-form__textarea {
+  padding: 12px 16px;
+  height: 120px;
   resize: none;
 }
 
 .modal-form__textarea::-webkit-input-placeholder {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form__textarea:-ms-input-placeholder {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form__textarea::-ms-input-placeholder {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form__textarea::placeholder {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -1095,14 +1141,26 @@ section {
   border: 1px solid #2196f3;
 }
 
+.modal-form__feedback {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .modal-form__checkbox-field {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .modal-form__checkbox-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  padding-left: 24px;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.modal-form__contract {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #2196f3;
 }
 
 .modal-form__checkbox::after {
@@ -1111,7 +1169,10 @@ section {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  left: 0;
   display: inline-block;
+  width: 16px;
+  height: 16px;
   background-color: #ffffff;
   border-color: #212121;
   background-image: url(../images/checkbox.svg);
@@ -1141,25 +1202,23 @@ section {
   background-origin: border-box;
 }
 
-.modal-form__contract {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #2196f3;
-}
-
 .modal-form__button {
-  background-color: #2196f3;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: rgba(255, 255, 255, 0);
-  outline: transparent;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0);
+  outline: transparent;
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 250ms;
