@@ -1,24 +1,38 @@
 .project {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: $bg-primary-color;
 
     &__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-bottom: 40px;
       }
-      
+
+    &__item {
+      margin-bottom: 15px;
+    } 
+    
     &__item:not(:last-child) {
-      }
+      margin-right: 8px;
+    }
       
     &__button {
+      padding: 6px 22px;
+      font-family: $font-primary;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-subtitle-button;
+      line-height: $line-height-project;
+      letter-spacing: 0.03em;
+
+      text-align: center;
+
+      color: $text-title-color;
+      background-color: $bg-secondary-color;
+
         border-radius: 4px;
         border: none;
-      
-        background-color: $bg-secondary-color;
-        color: $text-title-color;
-        font-family: $font-primary;
-        font-weight: $font-weight-medium;
-        font-size: $font-size-subtitle-button;
-        line-height: $line-height-project;
-        text-align: center;
-        letter-spacing: 0.03em;
       
         box-shadow: 0px 3px 1px $box-shadow-transition-color, 0px 1px 2px $box-shadow-transition-color,
           0px 2px 2px $box-shadow-transition-color;
