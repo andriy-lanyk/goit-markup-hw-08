@@ -39,6 +39,16 @@
   
     @include transition (transform);
 
+    @media screen and (min-width: 768px) {
+      width: 450px;
+      height: auto;
+      min-height: 609px;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
     &__button {
         position: absolute;
         top: 8px;
@@ -169,7 +179,7 @@
       }
       
     &__checkbox-text {
-      padding-left: 24px;
+      padding-left: 21px;
       
         font-size: $font-size-modal-content;
         line-height: $line-height-title;

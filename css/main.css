@@ -1167,6 +1167,18 @@ section {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: auto;
+    min-height: 609px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .modal__button {
   position: absolute;
   top: 8px;
@@ -1330,7 +1342,7 @@ section {
 }
 
 .modal-form__checkbox-text {
-  padding-left: 24px;
+  padding-left: 21px;
   font-size: 12px;
   line-height: 1.17;
 }
