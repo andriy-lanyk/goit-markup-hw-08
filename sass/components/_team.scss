@@ -12,7 +12,9 @@
     }
       
     &__list {
-
+      margin: 0;
+      padding: 0;
+      list-style: none;
       }
       
     &__item {
@@ -24,9 +26,11 @@
           0px 2px 1px $box-shadow-tertiary-color;
       }
       
-    &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      &__item:not(:last-child) {
       margin-bottom: 30px;
       }
+    }
       
     &__photo {
       margin-bottom: 30px;
@@ -38,7 +42,7 @@
 
       font-weight: $font-weight-medium;
       font-size: $font-size-subtitle-button;
-      line-height: $line-height-logo-card;
+      line-height: $line-height-submit;
 
       text-align: center;
 
@@ -49,7 +53,7 @@
       margin-bottom: 16px;
 
       font-size: $font-size-subtitle-button;
-      line-height: $line-height-logo-card;
+      line-height: $line-height-submit;
 
       text-align: center;
     }
@@ -99,6 +103,28 @@
       height: 20px;  
         fill: currentColor;
       }
+
+  /* TABLET */
+  
+    @media screen and (min-width: 768px) {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -30px;
+            margin-right: -15px;
+            margin-left: -15px;
+            }
+            
+          &__item {
+            display: inline-block;
+            margin-top: 30px;
+            margin-right: 15px;
+            margin-left: 15px;
+      
+            height: auto;
+            width: calc((100% - 4 * 15px) / 2);
+            }
+    }
 }
   
 
