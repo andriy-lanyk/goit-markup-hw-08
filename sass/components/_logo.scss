@@ -3,8 +3,8 @@
   
     font-family: $font-secondary;
     font-weight: $font-weight-bold;
-    font-size: $font-size-logo;
-    line-height: $line-height-logo-card;
+    font-size: $font-size-header-mail;
+    line-height: $line-height-title;
 
     &__text {
         color: $active-color;
@@ -31,6 +31,17 @@
         & {
           display: inline-block;
           padding: 16px 0;
+        }
+      }
+
+      /* TABLET */
+
+    @media screen and (min-width: 768px) {
+        & {
+          display: inline-block;
+          padding-top: 26px;
+          padding-bottom: 26px;
+          margin-right: 88px;
         }
       }
 }

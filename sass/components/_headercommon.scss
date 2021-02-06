@@ -137,6 +137,8 @@
       color: rgba(33, 33, 33, 0.2);
     }
 
+        /* HEADER for TABLET */
+
     @media screen and (min-width: 768px) {
       &__menu-container {
         display: none;
@@ -145,7 +147,13 @@
       &__menu-button {
         display: none;
       }
+
+      &__container {
+        display: flex;
+      }
+
     }
+
 }
 
 

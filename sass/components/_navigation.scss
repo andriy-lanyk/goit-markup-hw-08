@@ -1,9 +1,7 @@
 .site-navigation {
-
-    &__item:not(:last-child) {
-      }
       
     &__link {
+        padding: 31px 0;
         font-weight: $font-weight-medium;
         font-size: $font-size-primary;
         line-height: $line-height-primary;
@@ -39,4 +37,22 @@
 @media screen and (max-width: 767px) {
   .header__nav {
     display: none;}
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-navigation {
+    display: flex;
+    margin-right: 84px;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
