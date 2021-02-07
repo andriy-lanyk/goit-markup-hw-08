@@ -1,14 +1,20 @@
 .team {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #f5f4fa;
+    background-color: $bg-secondary-color;
 
     &__title {
+      margin-top: 0;
       font-weight: $font-weight-bold;
       font-size: $font-size-title-mobile;
       line-height: $line-height-title;
       text-align: center;
       color: $text-title-color;
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: $font-size-title-section;
+      }
     }
       
     &__list {
@@ -106,7 +112,7 @@
 
   /* TABLET */
   
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -124,6 +130,27 @@
             height: auto;
             width: calc((100% - 4 * 15px) / 2);
             }
+    }
+
+    /* DESKTOP */
+
+    @media screen and (min-width: 1200px) {
+        &__list {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__item {
+          width: calc((100% - 90px) / 4);
+          margin-right: $margin-section-item;
+          padding-bottom: 30px;
+        
+          text-align: center;
+        }
+
+        &__item:nth-child(4n) {
+          margin-right: 0;
+        }
     }
 }
   

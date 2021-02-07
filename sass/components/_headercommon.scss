@@ -4,6 +4,10 @@
   padding: 0 15px;
   background-color: $bg-primary-color;
 
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+  }
+
     &--border {
         border: 1px solid $border-header-color;
       }
@@ -152,6 +156,12 @@
         display: flex;
       }
 
+    }
+
+    @media screen and (min-width: 1200px) {
+      &__container {
+        padding: 0 15px;
+      } 
     }
 
 }

@@ -9,6 +9,12 @@
         color: $text-title-color;
       
         @include transition (color);
+        
+        @media screen and (min-width: 1200px) {
+          display: flex;
+          padding-top: 32px;
+          padding-bottom: 32px;
+        }
       }
       
     &__link--current {

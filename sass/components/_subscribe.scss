@@ -1,5 +1,14 @@
 .subscribe {
 
+  @media screen and (min-width: 1200px) {
+    margin-left: 100px;
+
+    &__form {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
     &__title {
       margin-bottom: 20px;
 
@@ -27,8 +36,13 @@
       
       color: $logo-primary-color;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
         min-width: 450px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-bottom: 0;
       }
     }
         
@@ -56,6 +70,11 @@
       box-shadow: 0px 4px 4px $box-shadow-button-color;
       border-radius: 4px;
       border-color: transparent;
+
+      @media screen and (min-width: 1200px) {
+        margin-left: 11px;
+        margin-right: 0;
+      }
     }
       
     &__button-text {
@@ -71,7 +90,7 @@
 
     /* TABLET */
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       & {
         margin-left: auto;
         margin-right: auto;

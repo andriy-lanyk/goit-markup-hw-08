@@ -6,6 +6,13 @@
     font-size: $font-size-header-mail;
     line-height: $line-height-title;
 
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+      
+      font-size: $font-size-logo;
+      line-height: $line-height-logo-card;
+    }
+
     &__text {
         color: $active-color;
       }
