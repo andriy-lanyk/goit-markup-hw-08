@@ -516,6 +516,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -909,11 +913,6 @@ section {
   padding: 0 15px;
   background-color: #ffffff;
   /* HEADER for MOBILE */
-  /*&__menu-button--cross {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-    }*/
   /* HEADER for TABLET */
 }
 
@@ -1362,6 +1361,7 @@ section {
   height: 100%;
   padding: 93px 15px;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   opacity: 1;
   -webkit-transition-property: opacity;
   transition-property: opacity;
