@@ -12,6 +12,11 @@
     opacity: 1;
   
     @include transition (opacity);
+
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+      z-index: 3;
+    }
   }
   
 .backdrop.is-hidden {
@@ -47,6 +52,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(1);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 528px;
+      min-height: 581px;
     }
 
     &__button {
@@ -91,7 +101,11 @@
       text-align: center;
       
       color: $text-title-color;
+
+      @media screen and (min-width: 1200px) {
+        line-height: $line-height-modal-title;
       }
+    }
       
     &__lable {
       display: block;
@@ -162,6 +176,11 @@
         letter-spacing: 0.01em;
         
         color: rgba(117, 117, 117, 0.5);
+
+        @media screen and (min-width: 1200px) {
+          font-size: $font-size-modal-content;
+          line-height: $line-height-title;
+        }
       }
       
     &__textarea:focus {
@@ -176,6 +195,10 @@
     &__checkbox-field {
         position: relative;
         margin-bottom: 30px;
+
+        @media screen and (min-width: 1200px) {
+          padding-left: 36px;
+        }
       }
       
     &__checkbox-text {
@@ -183,6 +206,13 @@
       
         font-size: $font-size-modal-content;
         line-height: $line-height-title;
+
+        @media screen and (min-width: 1200px) {
+          height: 24px;
+          padding-left: 0;
+          font-size: $font-size-primary;
+          line-height: $line-height-text;
+        }
       }
 
     &__contract {
@@ -210,6 +240,10 @@
         background-origin: border-box;
       
         @include transition (background-color, border-color);
+
+        @media screen and (min-width: 1200px) {
+          left: 12px;
+        }
       }
       
       /*сделал эффект для фокуса, по макету такого нет*/

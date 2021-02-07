@@ -1355,6 +1355,13 @@ section {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    padding: 0;
+    z-index: 3;
+  }
+}
+
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -1395,6 +1402,13 @@ section {
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -1444,6 +1458,12 @@ section {
   line-height: 1.5;
   text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form__lable {
@@ -1546,6 +1566,25 @@ section {
   color: rgba(117, 117, 117, 0.5);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-form__textarea::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .modal-form__textarea:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .modal-form__textarea::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .modal-form__textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 .modal-form__textarea:focus {
   border: 1px solid #2196f3;
 }
@@ -1560,10 +1599,25 @@ section {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox-field {
+    padding-left: 36px;
+  }
+}
+
 .modal-form__checkbox-text {
   padding-left: 21px;
   font-size: 12px;
   line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox-text {
+    height: 24px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__contract {
@@ -1594,6 +1648,12 @@ section {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox::after {
+    left: 12px;
+  }
 }
 
 .modal-form__checkbox-input:focus + .modal-form__checkbox::after {
