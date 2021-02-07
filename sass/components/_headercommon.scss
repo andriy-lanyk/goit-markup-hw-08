@@ -20,6 +20,12 @@
     }
 
     &__menu-button {
+      position: absolute;
+      z-index: 10;
+
+      top: 10px;
+      right: 15px;
+
       width: 40px;
       height: 40px;
       padding: 0;
@@ -31,6 +37,19 @@
       @include transition (color);
     }
 
+    &__menu-button .header__menu-button--cross {
+      display: none;
+    }
+
+    &__menu-button.is-open .header__menu-button--cross {
+      display: block;
+      z-index: 5;
+    }
+
+    &__menu-button.is-open .header__menu-button--burger {
+      display: none;
+    }
+
     &__menu-button:hover,
     &__menu-button:focus {
         color: $active-color;
@@ -38,12 +57,6 @@
 
     &__icon {
       fill: currentColor;
-    }
-
-    &__menu-button--cross {
-      position: absolute;
-      top: 10px;
-      right: 15px;
     }
 
     &__menu-container {
