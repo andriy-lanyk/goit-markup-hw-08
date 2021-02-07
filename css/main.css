@@ -700,10 +700,10 @@ section {
   border-left: 1px solid #eeeeee;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0), 1px 4px 6px rgba(0, 0, 0, 0);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0), 1px 4px 6px rgba(0, 0, 0, 0);
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-property: border-color, -webkit-box-shadow;
+  transition-property: border-color, -webkit-box-shadow;
+  transition-property: box-shadow, border-color;
+  transition-property: box-shadow, border-color, -webkit-box-shadow;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -713,6 +713,7 @@ section {
 .example__link:focus, .example__link:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  border-color: #2196f3;
 }
 
 .example__content {
@@ -774,6 +775,19 @@ section {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .example__specification {
+    position: absolute;
+    width: 322px;
+    height: 168px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 .example__link:focus .example__description,
 .example__link:hover .example__description {
   -webkit-transform: translateY(0);
@@ -798,6 +812,12 @@ section {
     margin-left: 15px;
     height: auto;
     width: calc((100% - 4 * 15px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .example__item {
+    width: calc((100% - 6 * 15px) / 3);
   }
 }
 
@@ -1698,6 +1718,13 @@ section {
   background-color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .project {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .project__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1715,6 +1742,12 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project__list {
+    margin-bottom: 50px;
   }
 }
 

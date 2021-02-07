@@ -20,13 +20,14 @@
       box-shadow: 0px 1px 1px $box-shadow-transition-color, 0px 4px 4px $box-shadow-transition-color,
         1px 4px 6px $box-shadow-transition-color;
       
-      @include transition (box-shadow);
+      @include transition (box-shadow, border-color);
     }
       
     &__link:focus,
     &__link:hover {
       box-shadow: 0px 1px 1px $box-shadow-primary-color, 0px 4px 4px rgba(0, 0, 0, 0.06),
           1px 4px 6px rgba(0, 0, 0, 0.16);
+          border-color: $active-color;
     }
       
     &__content {
@@ -83,6 +84,16 @@
         @media screen and (min-width: 768px) {
           margin: 49px 24px;
         }
+
+        @media screen and (min-width: 1200px) {
+          position: absolute;
+          width: 322px;
+          height: 168px;
+          margin: 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
     }
       
     &__link:focus .example__description,
@@ -109,6 +120,10 @@
     
           height: auto;
           width: calc((100% - 4 * 15px) / 2);
+
+          @media screen and (min-width: 1200px) {
+            width: calc((100% - 6 * 15px) / 3);
+          }
         }
   }
 }
