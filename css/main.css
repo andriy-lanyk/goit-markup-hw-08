@@ -339,6 +339,12 @@ summary {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .advantages {
+    margin-bottom: 0;
+  }
+}
+
 .advantages__list {
   margin: 0;
   padding: 0;
@@ -380,8 +386,8 @@ summary {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: -30px;
     margin-right: -15px;
     margin-left: -15px;
@@ -418,6 +424,13 @@ summary {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
@@ -523,13 +536,25 @@ body.modal-open {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container {
+    width: 768px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -550,12 +575,11 @@ img {
 
 section {
   width: 100%;
-  padding: 0 15px;
 }
 
 @media screen and (min-width: 1200px) {
   section {
-    padding: 0;
+    padding: 94px 0;
   }
 }
 
@@ -827,14 +851,8 @@ section {
 
 .footer {
   width: 100%;
-  padding: 60px 15px;
+  padding: 60px 0;
   background-color: #2f303a;
-}
-
-@media screen and (min-width: 1200px) {
-  .footer {
-    padding: 60px 0px;
-  }
 }
 
 .footer__container {
@@ -908,9 +926,7 @@ section {
 }
 
 .header {
-  position: relative;
   width: 100%;
-  padding: 0 15px;
   background-color: #ffffff;
   /* HEADER for MOBILE */
   /* HEADER for TABLET */
@@ -927,6 +943,7 @@ section {
 }
 
 .header__container--mobile {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -983,7 +1000,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 48px 40px;
   background-color: #ffffff;
@@ -998,6 +1015,9 @@ section {
 
 .header__menu {
   margin-bottom: 302px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
 }
 
 .header__menu-navigation-item:not(:last-child) {
@@ -1018,6 +1038,9 @@ section {
 
 .header__menu-contacts {
   margin-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
 }
 
 .header__menu-contacts-item:not(:last-child) {
@@ -1044,6 +1067,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
 }
 
 .header__menu-social-item:not(:last-child) {
@@ -1095,6 +1121,12 @@ section {
   /* DESKTOP */
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    margin-bottom: 0;
+  }
+}
+
 .hero__overlay {
   margin-left: auto;
   margin-right: auto;
@@ -1126,21 +1158,21 @@ section {
 }
 
 .hero__container {
-  padding: 118px 53px;
+  padding: 118px 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__container {
-    padding: 116px 204px;
+    padding: 116px 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    padding-top: 200px;
+    padding: 200px 0;
     width: 696px;
   }
 }
@@ -1347,8 +1379,8 @@ section {
 @media screen and (min-width: 768px) {
   .logo {
     display: inline-block;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-right: 88px;
   }
 }
@@ -1363,6 +1395,7 @@ section {
   background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
   opacity: 1;
+  z-index: 15;
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 250ms;
@@ -1374,7 +1407,6 @@ section {
 @media screen and (min-width: 1200px) {
   .backdrop {
     padding: 0;
-    z-index: 3;
   }
 }
 
@@ -1399,6 +1431,7 @@ section {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  z-index: 25;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -1716,8 +1749,12 @@ section {
   background-color: #188CE8;
 }
 
+.site-navigation {
+  height: 100%;
+}
+
 .site-navigation__link {
-  padding: 31px 0;
+  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -1736,8 +1773,8 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 33px;
+    padding-bottom: 33px;
   }
 }
 
@@ -1752,7 +1789,7 @@ section {
   display: block;
   width: 100%;
   height: 4px;
-  bottom: 0;
+  bottom: 1px;
   background-color: #2196f3;
   border-radius: 2px;
 }
@@ -1781,6 +1818,9 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 84px;
   }
   .site-navigation__item:not(:last-child) {
@@ -1796,8 +1836,8 @@ section {
 
 @media screen and (min-width: 1200px) {
   .project {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
@@ -2016,6 +2056,13 @@ section {
   /* DESKTOP */
 }
 
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .team__title {
   margin-top: 0;
   font-weight: 700;
@@ -2201,7 +2248,7 @@ section {
   display: block;
   width: 100%;
   height: 70px;
-  bottom: 3px;
+  bottom: 0;
   background-color: rgba(47, 48, 58, 0.8);
   z-index: 1;
 }
@@ -2212,7 +2259,7 @@ section {
   text-transform: uppercase;
   width: 100%;
   height: 16px;
-  bottom: 22px;
+  bottom: 18px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
