@@ -1010,11 +1010,20 @@ section {
 }
 
 .header__menu-container.is-open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header__menu {
-  margin-bottom: 302px;
+  /*margin-bottom: 302px;*/
   margin-left: auto;
   margin-right: auto;
   width: 480px;

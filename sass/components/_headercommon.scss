@@ -76,11 +76,14 @@
     }
 
     &__menu-container.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
     }
 
     &__menu {
-      margin-bottom: 302px;
+      /*margin-bottom: 302px;*/
       margin-left: auto;
       margin-right: auto;
       width: 480px;
